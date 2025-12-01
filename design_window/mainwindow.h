@@ -12,5 +12,9 @@ class MainWindow : public QMainWindow,
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void showCurrentTime();
+    void showAbout();
 };
 #endif // MAINWINDOW_H
