@@ -1,6 +1,21 @@
 #include "mainwindow.h"
 #include <QMessageBox>
 #include <QDateTime>
+#include <QFile>
+#include <QFileDialog>
+
+void write_file(QString path, QString str) {
+    QFile mFile(path);
+    if (!mFile.open(QFile::WriteOnly | QFile::Text)) {
+        qDebug() << "Could not open file for write.";
+        return;
+    }
+
+    QTextStream out(&mFile);
+    out << str;
+    mFile.flush();
+    mFile.close();
+};
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,3 +43,17 @@ void MainWindow::showAbout()
         "版本：1.0\n"
         "特色：Dark 暗色主題風格");
 }
+
+
+void MainWindow::on_actionSave_triggered()
+{
+
+    QString path = QFileDialog::getSaveFileName(
+        this,
+        tr("將資料儲存至..."),
+        QDir::homePath(),
+        tr("(*.txt)"))
+        ;
+    write_file(path, textEdit->toPlainText());
+}
+

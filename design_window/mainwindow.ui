@@ -13,7 +13,13 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -59,6 +65,10 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNew">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/.res/images/new.png</normaloff>:/images/.res/images/new.png</iconset>
+   </property>
    <property name="text">
     <string>新增(&amp;N)</string>
    </property>
@@ -70,6 +80,10 @@
    </property>
   </action>
   <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/.res/images/open.png</normaloff>:/images/.res/images/open.png</iconset>
+   </property>
    <property name="text">
     <string>開啟(&amp;O)</string>
    </property>
@@ -86,6 +100,10 @@
    </property>
   </action>
   <action name="actionSave">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/.res/images/save.png</normaloff>:/images/.res/images/save.png</iconset>
+   </property>
    <property name="text">
     <string>儲存(&amp;S)</string>
    </property>
@@ -97,6 +115,10 @@
    </property>
   </action>
   <action name="actionASave">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/.res/images/asave.png</normaloff>:/images/.res/images/asave.png</iconset>
+   </property>
    <property name="text">
     <string>另存(&amp;A)</string>
    </property>
@@ -116,6 +138,10 @@
    </property>
   </action>
   <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/.res/images/undo.png</normaloff>:/images/.res/images/undo.png</iconset>
+   </property>
    <property name="text">
     <string>還原(&amp;U)</string>
    </property>
@@ -127,6 +153,10 @@
    </property>
   </action>
   <action name="actionCut">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/.res/images/cut.png</normaloff>:/images/.res/images/cut.png</iconset>
+   </property>
    <property name="text">
     <string>剪下(&amp;T)</string>
    </property>
@@ -135,6 +165,10 @@
    </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/.res/images/copy.png</normaloff>:/images/.res/images/copy.png</iconset>
+   </property>
    <property name="text">
     <string>複製(&amp;C)</string>
    </property>
@@ -164,6 +198,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="designwindow.qrc"/>
+ </resources>
  <connections/>
 </ui>

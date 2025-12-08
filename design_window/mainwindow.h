@@ -16,5 +16,7 @@ public:
 private slots:
     void showCurrentTime();
     void showAbout();
+
+    void on_actionSave_triggered();
 };
 #endif // MAINWINDOW_H
